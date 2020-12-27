@@ -1,0 +1,121 @@
+Nav Bar ===== all pages
+  Link to homepage
+  search features
+    Search by clicking on
+      Categories
+      Subjects
+      Courses
+    Search By term
+    Jumps to Course Page
+  make flashcards Link
+  how it works
+    - detailing how I set up my study algrithm
+  Login / Link to user page
+  Sign Up / Upgrade?
+
+Footer ===== all pages
+  creator
+    links to my public profiles
+      linkedin
+      github
+      codePen
+      Personal coding projects site
+  Categories
+    few popular Categories
+    like to categories page
+  More to know
+    About me
+    Link to app Academy
+    Contact Info
+    Donate to me link to cashApp.
+
+Pages
+
+  Landing
+    rotating images
+    Link to search categories page
+    make flashcards/courses    === takes you to create courses/ or to sign up
+
+  UserPage
+    PageHeader
+      username
+      total cards in my classes
+      toatl cards studied
+      decks created
+    SideBar
+      About
+      Joined Date
+      Earth Dweller
+      Homebase
+    Main Page
+      Course studying
+      Course created
+
+  Users Course Study Page  ===== No navbar or footer
+    Sideback
+      username
+      my classes / progress bar?
+      create a new course
+      find flashcards
+    Main Page
+      Header
+        Name of course
+        creator
+        total cards in deck and total studied
+        progress bar?
+      About
+        Headline "This course was created by BrainBloom user ***. Visit their profile(link) to learn more aobut the creator"
+        Course Description
+        Tags
+      Decks
+        List of all decks within the course/links to their profiles
+        create/edit a new deck if this is a course created by user
+      learners
+        Who is currently studying this course
+
+  Course Page
+    Side bar
+      course name
+      image optional
+      creator
+      number of decks/cards
+    Main Page
+      Page header
+        Course Name
+        Tags
+        Study this course button
+      Decks listed
+      bonus: current learners
+
+  Card Display page
+    SideBar
+      name of course
+      list of each deck in course
+    Main Page
+      Page header
+        Course Name
+        Tags
+        Study this course button
+      Deck name and number of cards within
+      Each card laid out front and back
+
+  Study Page  ==== No navbar or footer
+    SideBar
+      Name
+      Progress tracker
+      Confidence rating?
+    Main Page
+      Deck name
+      Cards ratio studied/total
+      See all cards in this deck (card display page)
+      The card front/back with edit feature
+      reveal/scoring button
+      coloring of cards once rated
+
+  Create Card Page
+    Name of deck
+    Create a front
+    create a back
+    add/delete a card
+    save deck
+    start studying
