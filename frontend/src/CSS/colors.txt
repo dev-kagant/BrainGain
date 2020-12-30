@@ -1,0 +1,1 @@
+Main colors used in and throughout app.
