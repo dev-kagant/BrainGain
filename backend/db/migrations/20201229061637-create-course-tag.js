@@ -11,23 +11,25 @@ module.exports = {
       tagId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Tag'
+          model: 'Tags'
         },
       },
       courseId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Course'
+          model: 'Courses'
         },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

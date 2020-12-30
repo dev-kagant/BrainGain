@@ -8,28 +8,30 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
+      creatorId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'User'
-        }
+          model: 'Users'
+        },
       },
       courseId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Course'
-        }
+          model: 'Courses'
+        },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

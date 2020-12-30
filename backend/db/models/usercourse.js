@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const UserCourse = sequelize.define('UserCourse', {
-    userId: {
+    creatorId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
