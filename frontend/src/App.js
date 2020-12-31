@@ -8,7 +8,10 @@ import Navigation from "./components/Navigation";
 import HomePage from "./components/Home";
 import Footer from "./components/Footer";
 import UserPage from "./components/UserPage";
-import Dashboard from "./components/Dashboard"
+import Dashboard from "./components/Dashboard";
+import Course from "./components/Course";
+import Cards from "./components/Cards";
+import Search from "./components/Search";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,13 +36,28 @@ function App() {
             <HomePage />
             <Footer />
           </Route>
-          <Route path="/user">
+          <Route path="/user/userId">
             <Navigation isLoaded={isLoaded} />
             <UserPage />
             <Footer />
           </Route>
-          <Route path="/dashboard">
+          <Route path="/dashboard/userId">
             <Dashboard />
+          </Route>
+          <Route path="/course/courseId/deckId">
+            <Navigation isLoaded={isLoaded} />
+            <Cards />
+            <Footer />
+          </Route>
+          <Route path="/course/courseId">
+            <Navigation isLoaded={isLoaded} />
+            <Course />
+            <Footer />
+          </Route>
+          <Route path="/search">
+            <Navigation isLoaded={isLoaded} />
+            <Search />
+            <Footer />
           </Route>
         </Switch>
       )}

@@ -1,4 +1,4 @@
-Nav Bar ===== all pages
+##Nav Bar ===== all pages
   Link to homepage
   search features
     Search by clicking on
@@ -13,7 +13,7 @@ Nav Bar ===== all pages
   Login / Link to user page
   Sign Up / Upgrade?
 
-Footer ===== all pages
+##Footer ===== all pages
   creator
     links to my public profiles
       linkedin
@@ -31,12 +31,12 @@ Footer ===== all pages
 
 Pages
 
-  Landing
+  ##Landing
     rotating images
     Link to search categories page
     make flashcards/courses    === takes you to create courses/ or to sign up
 
-  UserPage
+  ##UserPage
     PageHeader
       username
       total cards in my classes
@@ -51,7 +51,7 @@ Pages
       Course studying
       Course created
 
-  Users Course Study Page  ===== No navbar or footer
+  ##Users Course Study Page  ===== No navbar or footer
     Sideback
       username
       my classes / progress bar?
