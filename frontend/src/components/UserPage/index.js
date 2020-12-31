@@ -1,24 +1,12 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, NavLink } from "react-router-dom";
+import Studying from "./Components/Studying";
+import Created from "./Components/Created";
 import './userpage.css';
 
 function UserPage() {
 
 
-
-    // let userToggle;
-    // if (sessionUser) {
-    //     sessionLinks = (
-    //         <ProfileButton user={sessionUser} />
-    //     );
-    // } else {
-    //     sessionLinks = (
-    //         <>
-    //             <LoginFormModal />
-    //             <SignupFormModal />
-    //         </>
-    //     );
-    // }
 
     return (
         <div>
@@ -48,12 +36,20 @@ function UserPage() {
                 <button>Contact User</button>
             </div>
             <div>
-                <h2 onClick="">Courses Studying ('Number of Courses')</h2>
-                <h2 onClick="">Courses Created ('Number of Courses Created')</h2>
-                <div>
-                    <div>Map over 'UserCourses'</div>
-                    <div>Map over 'Course with user.id'</div>
-                </div>
+                <NavLink to="/user/userId/studying">Courses Studying</NavLink>
+                <NavLink to="/user/userId/created">Courses Created</NavLink>
+            </div>
+            <div>
+                <Switch>
+                    <Route
+                        path="/user/userId/studying"
+                        render={() => <Studying />}>
+                    </Route>
+                    <Route
+                        path="/user/userId/created"
+                        render={() => <Created />}>
+                    </Route>
+                </Switch>
             </div>
         </div >
     )

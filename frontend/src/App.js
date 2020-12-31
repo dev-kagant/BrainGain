@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation";
 import HomePage from "./components/Home";
 import Footer from "./components/Footer";
 import UserPage from "./components/UserPage";
-import UserCourses from "./components/UserCourses"
+import Dashboard from "./components/Dashboard"
 
 function App() {
   const dispatch = useDispatch();
@@ -38,8 +38,8 @@ function App() {
             <UserPage />
             <Footer />
           </Route>
-          <Route path="/courses">
-            <UserCourses />
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       )}
