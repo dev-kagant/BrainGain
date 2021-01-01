@@ -8,6 +8,7 @@ api/courses/courseId ==== GET: course information and get all decks within a cou
 api/courses/search ==== GET: getting all courses that match the search criteria
 api/courses/courseId/tags ==== GET: get all tags associated with a course
 api/courses/tags ==== POST: creating a new tag and make sure its not a duplicate
+**bonus api/courses/courseId/studiers: GET: get all users currently studying this course
 
 api/decks ==== POST:creating a new deck
 api/decks/deckId/remove ==== DELETE: remove a deck
