@@ -1,0 +1,26 @@
+Types of Routes to create
+
+api/users/userId ==== GET: get user information
+
+api/courses === POST:creating a new course
+api/courses/courseId/remove ==== DELETE: remove a course
+api/courses/courseId ==== GET: course information and get all decks within a course
+api/courses/search ==== GET: getting all courses that match the search criteria
+api/courses/courseId/tags ==== GET: get all tags associated with a course
+api/courses/tags ==== POST: creating a new tag and make sure its not a duplicate
+
+api/decks ==== POST:creating a new deck
+api/decks/deckId/remove ==== DELETE: remove a deck
+api/decks/deckId/cards ==== POST:creating a new card
+api/decks/deckId/cardId/remove ==== DELETE: remove a card
+api/decks/deckId ==== GET: deck information and getting all cards within this deck id
+
+api/dashboard/userId/studying ==== GET: getting a users courses they are studying
+api/dashboard/userId/study/courseId ==== POST: add a new course to userCourses
+api/dashboard/userId/study/courseId/remove ==== DELETE: remove a course to userCourses
+api/dashboard/userId/created ==== GET: getting a users courses they created
+
+
+api/categories ==== GET: get all categories
+api/categories/categoryId/subcategories ==== GET: get all subcategories under a category
+api/categories/categoryId/subcategoryId/courses ==== GET: get all courses under a subcategory

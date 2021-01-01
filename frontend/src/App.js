@@ -36,20 +36,20 @@ function App() {
             <HomePage />
             <Footer />
           </Route>
-          <Route path="/user/userId">
+          <Route path="/user/:userId">
             <Navigation isLoaded={isLoaded} />
             <UserPage />
             <Footer />
           </Route>
-          <Route path="/dashboard/userId">
+          <Route path="/dashboard/:userId">
             <Dashboard />
           </Route>
-          <Route path="/course/courseId/deckId">
+          <Route path="/course/:courseId/:deckId">
             <Navigation isLoaded={isLoaded} />
             <Cards />
             <Footer />
           </Route>
-          <Route path="/course/courseId">
+          <Route path="/course/:courseId">
             <Navigation isLoaded={isLoaded} />
             <Course />
             <Footer />

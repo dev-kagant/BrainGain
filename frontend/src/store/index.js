@@ -1,9 +1,19 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import session from './session'
+import session from './session';
+// import courses from './courses';
+// import decks from './decks';
+// import cards from './cards';
+// import tags from './tags';
+// import userCourses from './userCourses'
 
 const rootReducer = combineReducers({
-  session
+  session,
+  // courses,
+  // decks,
+  // cards,
+  // tags,
+  // userCourses
 });
 
 let enhancer;

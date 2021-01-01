@@ -1,12 +1,13 @@
 import React from 'react';
-import { Route, Switch, NavLink } from "react-router-dom";
+import { Route, Switch, NavLink, useParams } from "react-router-dom";
 import Studying from "./Components/Studying";
 import Created from "./Components/Created";
 import './userpage.css';
 
 function UserPage() {
 
-
+    const { userId } = useParams();
+    console.log(userId)
 
     return (
         <div>
@@ -31,8 +32,8 @@ function UserPage() {
             <div>
                 <h3>About 'Username'</h3>
                 <h5>Brainscape User since 'createdAt.year'</h5>
-                <h5>Earth Dweller since <n>some time before 'createdAt.year'</n></h5>
-                <h5>Home Base: <n>Here, there, and everywhere</n></h5>
+                <h5>Earth Dweller since <p>some time before 'createdAt.year'</p></h5>
+                <h5>Home Base: <p>Here, there, and everywhere</p></h5>
                 <button>Contact User</button>
             </div>
             <div>

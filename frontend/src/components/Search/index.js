@@ -7,10 +7,11 @@ function Search(props) {
     const dispatch = useDispatch();
     const [searchValue, setSearchValue] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const [searchCourses, setSearchCourses] = useState([])
+    const [searchCourses, setSearchCourses] = useState([]);
     useEffect(() => {
-        const courses = await fetch("/api/courses")
+        // const courses = await fetch("/api/courses")
     }, [searchValue])
+
 
     const handleSearchInputChanges = (e) => {
         setSearchValue(e.target.value);
@@ -20,7 +21,7 @@ function Search(props) {
         setSearchValue("")
     }
 
-    const callSearchFunction = (e) => {
+    const callSearchFunction = (e) => {       //fetch request with search value
         e.preventDefault();
         props.search(searchValue);
         resetInputField();
