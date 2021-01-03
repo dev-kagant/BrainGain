@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 5px 5px rgba(224, 145, 125, 0.349);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;

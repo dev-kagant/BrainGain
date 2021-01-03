@@ -32,8 +32,8 @@ function App() {
             <SignupFormPage />
           </Route> */}
           <Route path="/" exact>
-            <Navigation isLoaded={isLoaded} />
             <HomePage />
+            <Navigation isLoaded={isLoaded} />
             <Footer />
           </Route>
           <Route path="/user/:userId">

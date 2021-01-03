@@ -1,19 +1,19 @@
 // import React, { useState } from 'react';
-// import { Modal, ModalProvider } from '../../context/Modal';
+// import { Modal } from '../../context/Modal';
 // import CreateCourse from './CreateCourse';
 
 // function CreateCourseModal() {
 //     const [courseModal, setCourseModal] = useState(false);
 
 //     return (
-//         <ModalProvider>
-//             <div onClick={() => setCourseModal(true)} className="button">Create A Course</div>
+//         <>
+//             <div onClick={() => setCourseModal(true)} className="button"></div>
 //             {courseModal && (
 //                 <Modal onClose={() => setCourseModal(false)}>
 //                     <CreateCourse />
 //                 </Modal>
 //             )}
-//         </ModalProvider>
+//         </>
 //     );
 // }
 
