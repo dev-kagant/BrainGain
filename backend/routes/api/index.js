@@ -48,7 +48,7 @@ router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 
-// router.use('/courses', coursesRouter);
+router.use('/courses', coursesRouter);
 
 // router.use('/decks', decksRouter);
 

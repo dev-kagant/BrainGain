@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color:  rgb(224, 145, 125);
+    color: rgb(66, 66, 66)
+}
+
+li {
+    margin-top: 10px;
+    list-style-type: none;
+    position: relative;
+}

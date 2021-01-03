@@ -4,7 +4,7 @@ api/users/userId ==== GET: get user information
 
 api/courses === POST:creating a new course
 api/courses/courseId/remove ==== DELETE: remove a course
-api/courses/courseId ==== GET: course information and get all decks within a course
+**api/courses/courseId ==== GET: course information and get all decks within a course
 api/courses/search ==== GET: getting all courses that match the search criteria
 api/courses/courseId/tags ==== GET: get all tags associated with a course
 api/courses/tags ==== POST: creating a new tag and make sure its not a duplicate

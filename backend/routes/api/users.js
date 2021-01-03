@@ -29,7 +29,10 @@ router.get(
   '/:userId',
   asyncHandler(async (req, res) => {
     const userId = req.params.userId
-    console.log(userId)
+    const userInfo = await User.findOne({ where: { id: userId } });
+    return res.json({
+      userInfo
+    })
   })
 )
 

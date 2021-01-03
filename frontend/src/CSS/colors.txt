@@ -1,1 +1,8 @@
 Main colors used in and throughout app.
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+rgb(224, 145, 125) --- peach
+
+
+ rgb(0, 29, 92) --- dark blue

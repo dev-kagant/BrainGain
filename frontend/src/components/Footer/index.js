@@ -2,7 +2,7 @@ import './footer.css'
 
 function Footer() {
     return (
-        <div>
+        <div className="footer">
             <ul>
                 <h3>Creator Links</h3>
                 <li>Cloned Site</li>
