@@ -1,20 +1,20 @@
-// import React, { useState } from 'react';
-// import { Modal } from '../../context/Modal';
-// import CreateCourse from './CreateCourse';
+import React, { useState, useSelector } from 'react';
+import { Modal } from '../../context/Modal';
+import CreateCourse from './CreateCourse';
 
-// function CreateCourseModal() {
-//     const [courseModal, setCourseModal] = useState(false);
+function CreateCourseModal({ isLoaded }) {
+    const [courseModal, setCourseModal] = useState(false);
 
-//     return (
-//         <>
-//             <div onClick={() => setCourseModal(true)} className="button"></div>
-//             {courseModal && (
-//                 <Modal onClose={() => setCourseModal(false)}>
-//                     <CreateCourse />
-//                 </Modal>
-//             )}
-//         </>
-//     );
-// }
+    return (
+        <>
+            <div onClick={() => setCourseModal(true)} className="button">Make Flashycards</div>
+            {courseModal && (
+                <Modal onClose={() => setCourseModal(false)}>
+                    <CreateCourse isLoaded={isLoaded} />
+                </Modal>
+            )}
+        </>
+    );
+}
 
-// export default CreateCourseModal;
+export default CreateCourseModal;

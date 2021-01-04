@@ -28,9 +28,11 @@ router.get(
         const courseId = req.params.courseId
         const courseInfo = await Course.findOne({ where: { id: courseId } });
         const courseDecks = await Deck.findAll({ where: { courseId: courseId } });
+        const creatorInfo = await User.findOne({ whene: { id: courseInfo.creatorId } })
         return res.json({
             courseInfo,
-            courseDecks
+            courseDecks,
+            creatorInfo,
         })
     })
 )
@@ -40,14 +42,14 @@ router.post(
     '/:userId/course',
     validateCourse,
     asyncHandler(async (req, res) => {
-        const { name, description, subCategoryId } = req.body;
+        const { name, description } = req.body;
         const course = await Course.create({
             name: name,
             description: description,
-            creatorId: req.params.userId,
-            subCategoryId: subCategoryId,
+            creatorId: req.params.userId
         });
-        res.redirect(`/courses/${course.id}`)
+        // console.log(course)
+        return course;
     })
 );
 

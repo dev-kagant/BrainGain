@@ -2,8 +2,8 @@
 .main {
     width: auto;
     height: 50vw;
+    padding-left: 75px;
     background-color: rgba(59, 59, 59, 0.226);
-    padding-left: 50px;
 }
 
 #pic {
@@ -29,11 +29,11 @@
 .button-container {
     display: flex;
     flex-direction: row;
-    /* padding-bottom: 50px; */
+    padding-bottom: 50px;
     font-weight: 2px;
 }
 
-.landing-button{
+.home-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,28 +56,28 @@
     color: rgb(224, 145, 125);
 }
 
-/* .fadeIn {
+ .fadeIn {
     animation: fadeIn 5s,
 }
 
-.fadeOut {
+/* .fadeOut {
     animation: fadeOut 5s,
-} */
+}  */
 
 @keyframes fadeIn {
     from {
-        opacity: 0.5;
+        opacity: 0;
     }
     to {
         opacity: 1;
     }
 }
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
     from {
         opacity: 1;
     }
     to {
         opacity: 0.5;
     }
-}
+} */

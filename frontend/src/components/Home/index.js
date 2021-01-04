@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import CreateCourse from '../CreateCourseModal';
-import LoginForm from '../LoginFormModal';
-import { Modal } from '../../context/Modal';
+import CreateCourseModal from '../CreateCourseModal';
+import LoginFormModal from '../LoginFormModal';
 import bored from './CSS/bored.jpg';
 import braids from './CSS/braids.jpg';
 import study from './CSS/study.jpg';
@@ -15,22 +14,11 @@ import './home.css';
 const Home = ({ isLoaded }) => {
     // const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
-    const [courseModal, setCourseModal] = useState(false);
-    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         backgroundImageChange();
     }, [])
 
-    const handleMakeCourse = () => {
-        // if (sessionUser) {
-        //     <LoginFormModal />
-        // } else {
-        //     <CreateCourseModal />
-        // }
-
-        // let response = dispatch(createNewCourse)
-    };
 
     const handleSearchCourse = () => { };
 
@@ -44,62 +32,48 @@ const Home = ({ isLoaded }) => {
         const image6 = `url(${pencilchower}) center/cover`
 
         const pic = document.getElementById('pic')
-        console.log("does it work")
-
 
         let currentIndex = 1;
-
 
         setInterval(() => {
             const imageArray = [image1, image2, image3, image4, image5, image6];
 
-            pic.style.animation = `10s infinite normal fadeIn`
             pic.style.background = imageArray[currentIndex]
+            pic.style.animation = `5s infinite normal fadeIn`
 
             currentIndex++;
 
             if (currentIndex >= imageArray.length) {
                 currentIndex = 0
             }
-        }, 10000);
+        }, 5000);
     };
+
+
+    const handleMakeFlashcards = () => {
+
+        console.log('inside handleMakeFlashcards')
+    }
+
 
     let courseCreate;
 
-    const handleMakeFlashcards = () => {
-        if (sessionUser) {
-            return (
-                <>
-                    <div onClick={() => setCourseModal(true)} className="button">Make Flashcards</div>
-                    {courseModal && (
-                        <Modal onClose={() => setCourseModal(false)}>
-                            <CreateCourse />
-                        </Modal>
-                    )}
-                </>
-            )
-        } else {
-            return (
-                <>
-                    <div onClick={() => setShowModal(true)}>Make Flashcards</div>
-                    {showModal && (
-                        <Modal onClose={() => setShowModal(false)}>
-                            <LoginForm />
-                        </Modal>
-                    )}
-                </>
-            )
-        }
+    if (sessionUser) {
+        courseCreate = (
+            < CreateCourseModal isLoaded={isLoaded} />)
+    } else {
+        courseCreate = (
+            <LoginFormModal />)
     }
 
     return (
         <div className="page-grid-2" id="pic">
             <div className="main">
-                <h1 className="h1">Need to <br /> study hard?</h1>
-                <h3 className="h3">Flashcards may be the way!</h3>
+                <h1 className="h1">Need to study <br /> Study smart?</h1>
+                <h3 className="h3">Flashycards may be the way!</h3>
                 <div className="button-container">
-                    <button onClick={handleMakeFlashcards}>Make Flashcards</button>
-                    {/* {courseCreate} */}
+                    <div className="home-button lb1">{courseCreate}</div>
+
                     {/* <button onClick={handleMakeCourse} type="button" className="landing-button lb1">Make Flashcards</button>
                     <button onClick={handleSearchCourse} type="button" className="landing-button lb2">Search Flashcards</button> */}
                 </div>
