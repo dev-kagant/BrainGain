@@ -4,29 +4,32 @@ import * as courseActions from "../../store/courses";
 import { useParams } from 'react-router-dom';
 import "./course.css";
 
-async function Course() {
+function Course() {
     const dispatch = useDispatch();
     const [course, getCourse] = useState({});
     const { courseId } = useParams();
 
     // const thisCourse = dispatch(courseActions.getACourse(courseId))
     // getCourse(thisCourse)
+    const getThisCourse = () => {
+        dispatch(courseActions.getACourse(courseId)).then(({ course }) => getCourse({ course }))
 
+        // console.log('this is it', something)
+        // getCourse(...course, dispatch(courseActions.getACourse(courseId)));
+    }
 
     useEffect(() => {
-        getThisCourse().then((res) => getCourse(res))
-    }, [dispatch]);
-
-    const getThisCourse = async () => {
-        return dispatch(courseActions.getACourse(courseId))
-    }
+        // console.log(getThisCourse())
+        // getThisCourse().then((res) => console.log(JSON.stringify(res)))
+        getThisCourse()
+    }, []);
 
     // const getCourseCreator = () => {
     //     return dispatch()
     // }
 
 
-    // console.log('this is course', course.course.courseInfo)
+    console.log('this is course', course)
     // const courseName = course.name
     // console.log('this is state', courseName)
 
@@ -34,6 +37,7 @@ async function Course() {
     return (
         <div>
             <div>
+                {/* <h1>{course}</h1> */}
                 <div>
                     <h2>{course.course.courseInfo.name}</h2>
                     <div>Icon</div>

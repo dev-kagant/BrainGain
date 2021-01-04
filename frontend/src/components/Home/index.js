@@ -67,8 +67,8 @@ const Home = ({ isLoaded }) => {
     }
 
     return (
-        <div className="page-grid-2" id="pic">
-            <div className="main">
+        <div className="page-grid-2" id="pic" >
+            <div className="main" >
                 <h1 className="h1">Need to study <br /> Study smart?</h1>
                 <h3 className="h3">Flashycards may be the way!</h3>
                 <div className="button-container">
