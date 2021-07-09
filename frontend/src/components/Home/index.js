@@ -16,6 +16,7 @@ const Home = ({ isLoaded }) => {
     const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
+        // pic.style.background = ``
         backgroundImageChange();
     }, [])
 
@@ -32,23 +33,20 @@ const Home = ({ isLoaded }) => {
         const image6 = `url(${pencilchower}) center/cover`
 
         const pic = document.getElementById('pic')
-
+        pic.style.background = image1
         let currentIndex = 1;
 
         setInterval(() => {
             const imageArray = [image1, image2, image3, image4, image5, image6];
 
-            pic.style.background = imageArray[currentIndex]
-            pic.style.animation = `5s infinite normal fadeIn`
-
-            currentIndex++;
+            pic.style = `background: ${imageArray[currentIndex]}; animation: 3s ease-in both running fadein;`
 
             if (currentIndex >= imageArray.length) {
                 currentIndex = 0
             }
-        }, 5000);
+            currentIndex++;
+        }, 6000);
     };
-
 
     const handleMakeFlashcards = () => {
 
@@ -66,17 +64,20 @@ const Home = ({ isLoaded }) => {
             <LoginFormModal />)
     }
 
+    if(!study1){
+        return
+    }
+
     return (
-        <div className="page-grid-2" id="pic" >
-            <div className="main" >
+        <div className="main" id="pic" >
+            <div className="main-caption">
                 <h1 className="h1">Need to study <br /> Study smart?</h1>
                 <h3 className="h3">Flashycards may be the way!</h3>
                 <div className="button-container">
                     <div className="home-button lb1">{courseCreate}</div>
-
+                </div>
                     {/* <button onClick={handleMakeCourse} type="button" className="landing-button lb1">Make Flashcards</button>
                     <button onClick={handleSearchCourse} type="button" className="landing-button lb2">Search Flashcards</button> */}
-                </div>
             </div>
         </div >
     )

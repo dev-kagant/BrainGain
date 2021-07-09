@@ -33,36 +33,32 @@ function App() {
             <SignupFormPage />
           </Route> */}
           <Route path="/" exact>
+            {/* <Navigation isLoaded={isLoaded} /> */}
             <HomePage />
-            <Navigation isLoaded={isLoaded} />
-            <Footer />
           </Route>
           <Route path="/user/:userId">
-            <Navigation isLoaded={isLoaded} />
+            {/* <Navigation isLoaded={isLoaded} /> */}
             <UserPage />
-            <Footer />
           </Route>
           <Route path="/dashboard/:userId">
             <Dashboard />
           </Route>
           <Route path="/course/:courseId/:deckId">
-            <Navigation isLoaded={isLoaded} />
+            {/* <Navigation isLoaded={isLoaded} /> */}
             <Cards />
-            <Footer />
           </Route>
           <Route path="/course/:courseId">
-            <Navigation isLoaded={isLoaded} />
+            {/* <Navigation isLoaded={isLoaded} /> */}
             <Course />
-            <Footer />
           </Route>
           <Route path="/search">
-            <Navigation isLoaded={isLoaded} />
+            {/* <Navigation isLoaded={isLoaded} /> */}
             <Search />
-            <Footer />
           </Route>
         </Switch>
       )}
-      {/* <Footer /> */}
+      <Navigation isLoaded={isLoaded} />
+      <Footer /> 
     </>
   );
 }

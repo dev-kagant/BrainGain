@@ -1,15 +1,41 @@
 
 .main {
+    padding-top: 48px;
     width: auto;
     height: 50vw;
     padding-left: 75px;
-    background-color: rgba(59, 59, 59, 0.226);
+    /* background-color: rgba(59, 59, 59, 0.226); */
 }
 
-#pic {
+@keyframes fadingIn {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+@keyframes fadingOut {
+    from {
+        opacity : 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+img {
+    animation: 2s fadingIn;
+    animation: 2s fadingOut 2s;
     /* background: url(./CSS/study1.jpg) center/cover; */
 }
+
+.main-caption {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 
 .h1{
     font-size: 90pt;
